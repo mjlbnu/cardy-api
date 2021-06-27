@@ -1,11 +1,9 @@
-CREATE TABLE establishment (
+CREATE TABLE client (
     id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
-    cnpj BIGINT(14) UNIQUE NOT NULL,
-    id_category BIGINT(20) NOT NULL,
-    FOREIGN KEY (id_category) REFERENCES category(id)
+    cpf BIGINT(11) UNIQUE NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO establishment (name, cnpj, id_category) values ('Establishment 1',12345678000134, 11);
-INSERT INTO establishment (name, cnpj, id_category) values ('Establishment 1',12345678000135, 12);
-INSERT INTO establishment (name, cnpj, id_category) values ('Establishment 1',12345678000136, 13);
+INSERT INTO client (name, cpf) values ('Client 1',12345678000134);
+INSERT INTO client (name, cpf) values ('Client 2',03057679954);
+INSERT INTO client (name, cpf) values ('Client 3',03057678854);

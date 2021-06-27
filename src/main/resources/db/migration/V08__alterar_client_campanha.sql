@@ -1,0 +1,1 @@
+ALTER TABLE client_campaign ADD created_at DATE NOT NULL;
